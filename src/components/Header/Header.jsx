@@ -3,15 +3,10 @@ import { IndexLink, Link } from 'react-router'
 import './Header.scss'
 
 export const Header = () => (
-  <div>
-    <h1>React Redux Starter Kit</h1>
-    <IndexLink to='/' activeClassName='route--active'>
-      Home
-    </IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName='route--active'>
-      Counter
-    </Link>
+  <div className='header'>
+    <IndexLink to='/' activeClassName='route--active'> 酷衣櫥 </IndexLink>
+    <IndexLink to='/counter' activeClassName='route--active'> 穿搭推薦 </IndexLink>
+    <Link to='/favorite' activeClassName='route--active'> 我的收藏 </Link>
   </div>
 )
 
