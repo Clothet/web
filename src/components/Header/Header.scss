@@ -1,9 +1,21 @@
 .route--active {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .header {
+  display: flex;
+  //justify-content: center;
+  align-items: center;
   background: #405664;
   height: 50px;
+}
+
+a{
+  color:#eee;
+  text-decoration:none;
+
+  &:hover {
+    color:yellow;
+    text-decoration:none;
+  }
 }
