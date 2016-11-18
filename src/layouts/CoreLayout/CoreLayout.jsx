@@ -8,6 +8,7 @@ export const CoreLayout = ({ children }) => (
     <Header />
     <div className='core-layout__viewport'>
       {children}
+
     </div>
   </div>
 )
