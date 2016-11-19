@@ -12,11 +12,20 @@ import Counter from '../components/Counter'
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
+
+/*
+ 把 actionCreator 加上 dispatch 的功能
+ 並以prop的方式給component???
+ */
 const mapDispatchToProps = {
   increment : () => increment(1),
   doubleAsync
 }
 
+/*
+  為了把state的結果拿過來 pass 給這個 component
+  原本 store.getState().counter ---> this.props.counter 變成這樣
+*/
 const mapStateToProps = (state) => ({
   counter : state.counter
 })

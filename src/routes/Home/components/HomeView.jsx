@@ -4,10 +4,18 @@ import './HomeView.scss'
 import sampleImage from "../assets/Duck.jpg"
 import Dropdown from 'react-dropdown'
 
-const options = [
-  'one', 'two', 'three'
+const options1 = [
+  'Lativ', 'Zara', 'Hangten'
 ]
-const defaultOption = options[0]
+const options2 = [
+  'Men', 'Women', 'both'
+]
+const options3 = [
+  'on sale', 'normal'
+]
+const defaultOption1 = options1[0]
+const defaultOption2 = options2[0]
+const defaultOption3 = options3[0]
 
 
 export default class HomeView extends React.Component {
@@ -20,49 +28,57 @@ export default class HomeView extends React.Component {
           <div className="col-sm-6 col-xs-12 inner-container">
 
             <div className="block">
-              <div className="title">裝備商店</div>
+              <div className="title">服飾商店</div>
               <hr ></hr>
+
+              {/*dropdown*/}
               <div className="row">
                 <div className="col-sm-4">
-                  <Dropdown options={options} onChange={this._onSelect} value={defaultOption}
+                  <Dropdown options={options1} onChange={this._onSelect} value={defaultOption1}
                             placeholder="Select an option"/>
                 </div>
                 <div className="col-sm-4">
-                  <Dropdown options={options} onChange={this._onSelect} value={defaultOption}
+                  <Dropdown options={options2} onChange={this._onSelect} value={defaultOption2}
                             placeholder="Select an option"/>
                 </div>
                 <div className="col-sm-4">
-                  <Dropdown options={options} onChange={this._onSelect} value={defaultOption}
+                  <Dropdown options={options3} onChange={this._onSelect} value={defaultOption3}
                             placeholder="Select an option"/>
                 </div>
               </div>
+
+              {/*Tabs*/}
+              <div className="tab-area">
+                <Tabs
+                  onSelect={this.handleSelect}
+                  selectedIndex={0}
+                >
+                  <TabList>
+                    <Tab>T-Shirt & 上衣</Tab>
+                    <Tab>針織衫 & 襯衫</Tab>
+                    <Tab>外套 & 大衣</Tab>
+                    <Tab>褲裝 & 裙裝</Tab>
+                    <Tab>其他</Tab>
+                  </TabList>
+                  <TabPanel>
+                    <h2>Hello from Foo</h2>
+                  </TabPanel>
+                  <TabPanel>
+                    <h2>Hello from Bar</h2>
+                  </TabPanel>
+                  <TabPanel>
+                    <h2>Hello from Baz</h2>
+                  </TabPanel>
+                </Tabs>
+              </div>
+
+
             </div>
 
-            <Tabs
-              onSelect={this.handleSelect}
-              selectedIndex={0}
-            >
-              <TabList>
-                <Tab className="GGYYh  ">Foo</Tab>
-                <Tab>Bar</Tab>
-                <Tab>Baz</Tab>
-                <Tab>Baz</Tab>
-                <Tab>Baz</Tab>
-              </TabList>
-              <TabPanel>
-                <h2>Hello from Foo</h2>
-              </TabPanel>
-              <TabPanel>
-                <h2>Hello from Bar</h2>
-              </TabPanel>
-              <TabPanel>
-                <h2>Hello from Baz</h2>
-              </TabPanel>
-            </Tabs>
 
             {/*---------------------------------*/}
             <div className="block">
-              <div className="title">個人裝備</div>
+              <div className="title">個人服飾</div>
               <hr ></hr>
             </div>
 
@@ -85,7 +101,7 @@ export default class HomeView extends React.Component {
             </div>
 
             <div className="block">
-              <div className="title">裝備商店</div>
+              <div className="title">服飾商店</div>
               <hr ></hr>
             </div>
 
