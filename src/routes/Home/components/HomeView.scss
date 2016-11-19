@@ -24,6 +24,9 @@ hr{
 }
 
 
+.block{
+  margin-bottom: 30px;
+}
 
 
 
@@ -131,8 +134,6 @@ hr{
 
 
 //Tab
-.react-tabs{
-}
 
 .ReactTabs__Tab {
   background-color: #909FAA;
@@ -140,10 +141,13 @@ hr{
   margin: 0 1px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  width: 19%;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
+  width: 19%;
+  //display: inline-block;
+  //flex-grow: 1;
+  //flex-basis: 0;
 }
 
 
@@ -151,7 +155,62 @@ hr{
   background-color: #30729A !important;
   color: #fff !important;
 }
-//Tab
+
+.ReactTabs__TabList{
+  margin: 0 !important;
+  border-bottom: none !important;
+
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: space-between; /* Safari 6.1+ */
+  display: flex;
+  justify-content: space-between;
+}
+
 .tab-area{
   margin-top: 15px;
+}
+
+.ReactTabs__TabPanel{
+  margin-top: -3px;
+  padding-top: 3px;
+  height: 200px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+//
+.focus-item-panel{
+  width: 100%;
+  border: 1px solid #bbb;
+  background-color:white;
+}
+
+#item-detail-panel{
+  background-color: white;
+  height: 200px;
+  text-align: start;
+  padding: 15px 20px;
+  line-height: 1.9;
+  color: #999;
+  #title{
+    color: #5581A2;
+  }
+
+}
+
+//
+.recommend-panel{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  height: 400px;
+  overflow: scroll;
+
+  .combination{
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 100px;
+    border:1px solid #aaa;
+  }
 }
