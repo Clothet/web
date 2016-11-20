@@ -4,11 +4,11 @@
   margin: 1.5rem auto;
 }
 
-.inner-container{
+.inner-container {
   padding: 0 10px 0 10px;
 }
 
-hr{
+hr {
   display: block;
   height: 1px;
   border: 0;
@@ -17,19 +17,15 @@ hr{
   padding: 0;
 }
 
-.title{
+.title {
   color: #EF9292;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 20px;
 }
 
-
-.block{
+.block {
   margin-bottom: 30px;
 }
-
-
-
 
 //dropdown style
 .Dropdown-root {
@@ -50,7 +46,6 @@ hr{
   padding: 8px 52px 8px 10px;
   transition: all 200ms ease;
 }
-
 
 .Dropdown-control:hover {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -90,7 +85,7 @@ hr{
   -webkit-overflow-scrolling: touch;
 }
 
-.Dropdown-menu .Dropdown-group > .Dropdown-title{
+.Dropdown-menu .Dropdown-group > .Dropdown-title {
   padding: 8px 10px;
   color: rgba(51, 51, 51, 1);
   font-weight: bold;
@@ -127,11 +122,12 @@ hr{
   display: block;
   padding: 8px 10px;
 }
-.Dropdown-placeholder{
-  color:#5581A2;
-}
-//dropdown style end
 
+.Dropdown-placeholder {
+  color: #5581A2;
+}
+
+//dropdown style end
 
 //Tab
 
@@ -142,7 +138,7 @@ hr{
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   overflow: hidden;
-  text-overflow:ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
   width: 19%;
   //display: inline-block;
@@ -150,67 +146,116 @@ hr{
   //flex-basis: 0;
 }
 
-
-.ReactTabs__Tab--selected{
+.ReactTabs__Tab--selected {
   background-color: #30729A !important;
   color: #fff !important;
 }
 
-.ReactTabs__TabList{
+.ReactTabs__TabList {
   margin: 0 !important;
   border-bottom: none !important;
-
-  display: -webkit-flex; /* Safari */
-  -webkit-justify-content: space-between; /* Safari 6.1+ */
   display: flex;
   justify-content: space-between;
 }
 
-.tab-area{
+.item-container {
+  display: inline-block;
+  width: 90px;
+  height: auto;
+
+  margin: 10px 10px;
+
+  .item-img {
+    width: 100%;
+    border: 1px solid #aaa;
+
+    &:focus {
+      outline: 2px solid deepskyblue;
+    }
+
+  }
+
+  .item-text {
+    width: 100%;
+    margin-top: 5px;
+    color: #888;
+    text-align: center;
+    //text-overflow:ellipsis;
+    //white-space: nowrap;
+    word-break: break-all
+  }
+}
+
+.tab-area {
   margin-top: 15px;
 }
 
-.ReactTabs__TabPanel{
+.ReactTabs__TabPanel {
   margin-top: -3px;
-  padding-top: 3px;
+  padding: 15px 15px 5px 15px;
   height: 200px;
   background-color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  text-align: start;
+  overflow: scroll;
+
 }
 
 //
-.focus-item-panel{
+.focus-item-panel {
   width: 100%;
   border: 1px solid #bbb;
-  background-color:white;
+  background-color: white;
 }
 
-#item-detail-panel{
+#item-detail-panel {
   background-color: white;
   height: 200px;
   text-align: start;
   padding: 15px 20px;
   line-height: 1.9;
   color: #999;
-  #title{
+  #title {
     color: #5581A2;
   }
 
 }
 
 //
-.recommend-panel{
+.recommend-panel {
   background-color: white;
   border-radius: 5px;
   padding: 10px;
   height: 400px;
   overflow: scroll;
 
-  .combination{
+  .combination {
     margin-bottom: 20px;
     border-radius: 5px;
-    height: 100px;
-    border:1px solid #aaa;
+    border: 1px solid #aaa;
+    display: flex;
+    height: auto;
+    position: relative;
+
+
+    .favorite-icon {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      right: 10px;
+    }
   }
+
+
+
 }
+
+
+
+.underline {
+  margin-left: 0%;
+}
+
+

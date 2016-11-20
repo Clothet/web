@@ -34,16 +34,13 @@ export default class HomeView extends React.Component {
               {/*dropdown*/}
               <div className="row">
                 <div className="col-sm-4">
-                  <Dropdown options={options1} onChange={this._onSelect} value={defaultOption1}
-                            placeholder="Select an option"/>
+                  <Dropdown options={options1} onChange={this._onSelect} value={defaultOption1}/>
                 </div>
                 <div className="col-sm-4">
-                  <Dropdown options={options2} onChange={this._onSelect} value={defaultOption2}
-                            placeholder="Select an option"/>
+                  <Dropdown options={options2} onChange={this._onSelect} value={defaultOption2}/>
                 </div>
                 <div className="col-sm-4">
-                  <Dropdown options={options3} onChange={this._onSelect} value={defaultOption3}
-                            placeholder="Select an option"/>
+                  <Dropdown options={options3} onChange={this._onSelect} value={defaultOption3}/>
                 </div>
               </div>
 
@@ -61,7 +58,36 @@ export default class HomeView extends React.Component {
                     <Tab>其他</Tab>
                   </TabList>
                   <TabPanel>
-                    <p>Hello from Foo</p>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container"></div>
+                    <div className="item-container"></div>
                   </TabPanel>
                   <TabPanel>
                     <h2>Hello from Bar</h2>
@@ -86,6 +112,7 @@ export default class HomeView extends React.Component {
             <div className="block">
               <div className="title">個人服飾</div>
               <hr ></hr>
+              {/*Tabs*/}
               <div className="tab-area">
                 <Tabs
                   onSelect={this.handleSelect}
@@ -99,7 +126,36 @@ export default class HomeView extends React.Component {
                     <Tab>其他</Tab>
                   </TabList>
                   <TabPanel>
-                    <p>Hello from Foo</p>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+                    <div className="item-container"></div>
+                    <div className="item-container"></div>
                   </TabPanel>
                   <TabPanel>
                     <h2>Hello from Bar</h2>
@@ -117,9 +173,8 @@ export default class HomeView extends React.Component {
 
               </div>
 
+
             </div>
-
-
 
 
           </div>
@@ -134,7 +189,7 @@ export default class HomeView extends React.Component {
                   <img className="focus-item-panel" src={sampleImage}/>
                 </div>
                 <div className="col-sm-6 col-xs-12">
-                  <div id="item-detail-panel" className="focus-item-panel" >
+                  <div id="item-detail-panel" className="focus-item-panel">
                     <div id="title">Disney T-shirt</div>
                     <div id="store">store: Lativ</div>
                     <div id="price">price: $200</div>
@@ -149,11 +204,39 @@ export default class HomeView extends React.Component {
               <div className="title">建議穿搭</div>
               <hr ></hr>
               <div className="recommend-panel radius-border">
-                <div className="combination"></div>
-                <div className="combination"></div>
-                <div className="combination"></div>
-                <div className="combination"></div>
-                <div className="combination"></div>
+
+                <div className="combination">
+
+
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ ß565156151651651skirt545</div>
+                    </div>
+                    <div className="item-container">
+                      <img className="item-img" src={sampleImage} tabIndex="0"/>
+                      <div className="item-text">Lativ skirt</div>
+                    </div>
+
+                    <img className="favorite-icon" src={sampleImage} />
+
+                </div>
+
+                <div className="combination">
+
+
+                  <div className="item-container">
+                    <img className="item-img" src={sampleImage} tabIndex="0"/>
+                    <div className="item-text">Lativ ß565156151651651skirt545</div>
+                  </div>
+                  <div className="item-container">
+                    <img className="item-img" src={sampleImage} tabIndex="0"/>
+                    <div className="item-text">Lativ skirt</div>
+                  </div>
+
+                  <img className="favorite-icon" src={sampleImage} />
+
+                </div>
+
               </div>
 
             </div>
