@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>shitsad</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="core.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="tab.css">
+    <link rel="stylesheet" type="text/css" href="select.css">
+</head>
+
+<body>
+    <!-- header start -->
+    <header>
+        <a href="/">
+            <div id="logo">酷衣櫥</div>
+        </a>
+        <div>
+            <a href="/" class='item item1'>
+            穿搭推薦
+        </a>
+            <a href="/" class='item item2'>
+            我的收藏
+        </a>
+            <div class="underline"></div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- {/*left side colume*/} -->
+            <div class="col-sm-6 col-xs-12 inner-container">
+                <div class="block">
+                    <div class="title">服飾商店</div>
+                    <hr></hr>
+                    <!-- {/*dropdown*/} -->
+                    <div class="dropdown-container">
+                        <select class="minimal">
+                            <option selected>Apples</option>
+                            <option>Pineapples</option>
+                            <option>Chocklate</option>
+                            <option>Pancakes</option>
+                        </select>
+                        <select class="minimal">
+                            <option selected>Apples</option>
+                            <option>Pineapples</option>
+                            <option>Chocklate</option>
+                            <option>Pancakes</option>
+                        </select>
+                        <select class="minimal">
+                            <option selected>Apples</option>
+                            <option>Pineapples</option>
+                            <option>Chocklate</option>
+                            <option>Pancakes</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <Dropdown options={options1} onChange={this._onSelect} value={defaultOption1}/>
+                        </div>
+                        <div class="col-sm-4">
+                            <Dropdown options={options2} onChange={this._onSelect} value={defaultOption2}/>
+                        </div>
+                        <div class="col-sm-4">
+                            <Dropdown options={options3} onChange={this._onSelect} value={defaultOption3}/>
+                        </div>
+                    </div>
+                    <!-- {/*Tabs*/} -->
+                    <ul class="tab">
+                        <li><a href="javascript:void(0)" class="tablinks1 active" onclick="openTab1(event, 'tab1')">T-Shirt & 上衣</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks1" onclick="openTab1(event, 'tab2')">針織衫 & 襯衫</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks1" onclick="openTab1(event, 'tab3')">外套 & 大衣</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks1" onclick="openTab1(event, 'tab4')">褲裝 & 裙裝</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks1" onclick="openTab1(event, 'tab5')">其他</a></li>
+                    </ul>
+                    <div id="tab1" class="tabcontent1" style="display: block;">
+                        <div class="item-container">
+                            <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                            <div class="item-text">Lativ skirt</div>
+                        </div>
+                        <div class="item-container">
+                            <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                            <div class="item-text">Lativ skirt</div>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tabcontent1">
+                        <h3>Paris</h3>
+                        <p>Paris is the capital of France.</p>
+                    </div>
+                    <div id="tab3" class="tabcontent1">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                    <div id="tab4" class="tabcontent1">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                    <div id="tab5" class="tabcontent1">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                    <!--  -->
+                </div>
+                <!-- {/} -->
+                <div class="block">
+                    <div class="title">個人服飾</div>
+                    <hr></hr>
+                    <ul class="tab">
+                        <li><a href="javascript:void(0)" class="tablinks2 active" onclick="openTab2(event, 'tab6')">T-Shirt & 上衣</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks2" onclick="openTab2(event, 'tab7')">針織衫 & 襯衫</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks2" onclick="openTab2(event, 'tab8')">外套 & 大衣</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks2" onclick="openTab2(event, 'tab9')">褲裝 & 裙裝</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks2" onclick="openTab2(event, 'tab10')">其他</a></li>
+                    </ul>
+                    <div id="tab6" class="tabcontent2" style="display: block;">
+                        <div class="item-container">
+                            <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                            <div class="item-text">Lativ skirt</div>
+                        </div>
+                        <div class="item-container">
+                            <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                            <div class="item-text">Lativ skirt</div>
+                        </div>
+                    </div>
+                    <div id="tab7" class="tabcontent2">
+                        <h3>Paris</h3>
+                        <p>Paris is the capital of France.</p>
+                    </div>
+                    <div id="tab8" class="tabcontent2">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                    <div id="tab9" class="tabcontent2">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                    <div id="tab10" class="tabcontent2">
+                        <h3>Tokyo</h3>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- {/*right side colume*/} -->
+            <div class="col-sm-6 col-xs-12 inner-container">
+                <div class="block">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <img class="focus-item-panel" src='./Duck.jpg' />
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div id="item-detail-panel" class="focus-item-panel">
+                                <div id="title">Disney T-shirt</div>
+                                <div id="store">store: Lativ</div>
+                                <div id="price">price: $200</div>
+                                <div id="note">note: no</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="title">建議穿搭</div>
+                    <hr></hr>
+                    <div class="recommend-panel radius-border">
+                        <div class="combination">
+                            <div class="item-container">
+                                <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                                <div class="item-text">Lativ ß565156151651651skirt545</div>
+                            </div>
+                            <div class="item-container">
+                                <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                                <div class="item-text">Lativ skirt</div>
+                            </div>
+                            <img class="favorite-icon" src='./Duck.jpg' />
+                        </div>
+                        <div class="combination">
+                            <div class="item-container">
+                                <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                                <div class="item-text">Lativ ß565156151651651skirt545</div>
+                            </div>
+                            <div class="item-container">
+                                <img class="item-img" src='./Duck.jpg' tabIndex="0" />
+                                <div class="item-text">Lativ skirt</div>
+                            </div>
+                            <img class="favorite-icon" src='./Duck.jpg' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./index.js"></script>
+
+</html>
