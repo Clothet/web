@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+</head>
+<style type="text/css">
+.resize-drag {
+    /*     background-color: #29e;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 20px; */
+    position: absolute;
+    left: 0;
+    width: 500px;
+    /* This makes things *much* easier
+    /* box-sizing: border-box; */
+    */
+}
+
+.resize-container {
+    width: 800px;
+    height: 1000px;
+}
+</style>
+
+<body>
+    <div class="resize-container">
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="snap">Snap Photo</button>
+
+        <img class="resize-drag" id="shirt" src="http://pngimg.com/upload/polo_shirt_PNG8140.png" data-border="0" />
+    	<canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+
+</body>
+<script src="http://code.interactjs.io/v1.2.6/interact.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var video = document.getElementById('video');
+// Elements for taking the snapshot
+document.getElementById("snap").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+
+// Trigger photo take
+
+
+// Get access to the camera!
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({
+        video: true
+    }).then(function(stream) {
+        video.src = window.URL.createObjectURL(stream);
+        video.play();
+    });
+}
+
+interact('.resize-drag')
+    .draggable({
+        onmove: window.dragMoveListener,
+        
+    })
+    .resizable({
+        preserveAspectRatio: true,
+        edges: {
+            left: true,
+            right: true,
+            bottom: true,
+            top: true
+        }
+    })
+    .on('resizemove', function(event) {
+        var target = event.target,
+            x = (parseFloat(target.getAttribute('data-x')) || 0),
+            y = (parseFloat(target.getAttribute('data-y')) || 0);
+
+        // update the element's style
+        target.style.width = event.rect.width + 'px';
+        target.style.height = event.rect.height + 'px';
+
+        // translate when resizing from top or left edges
+        x += event.deltaRect.left;
+        y += event.deltaRect.top;
+
+        target.style.webkitTransform = target.style.transform =
+            'translate(' + x + 'px,' + y + 'px)';
+
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+        target.textContent = Math.round(event.rect.width) + '×' + Math.round(event.rect.height);
+    });
+
+function dragMoveListener(event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+        target.style.transform =
+        'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+}
+
+$('#shirt').click(function() {
+    console.log()
+    console.log($(this).attr('data-border'))
+    if ($(this).attr('data-border') == "0") {
+        $(this).css('border', "2px solid #ccc")
+        $(this).attr('data-border', "1")
+    } else {
+        $(this).css('border', "")
+        $(this).attr('data-border', "0")
+    }
+})
+
+// this is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener;
+</script>
+
+</html>
