@@ -173,9 +173,9 @@ hr {
         margin-top: 5px;
         color: #888;
         text-align: center;
-        //text-overflow:ellipsis;
-        //white-space: nowrap;
-        word-break: break-all
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 
@@ -214,7 +214,7 @@ hr {
 }
 
 //
-.recommend-panel {
+#recommend-panel {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
@@ -234,13 +234,15 @@ hr {
             height: 30px;
             top: 10px;
             right: 10px;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }
 
-
-.dropdown-container{
-  display: flex;
-  justify-content: space-around;
-  margin: 16px 0;
+.dropdown-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 0;
 }

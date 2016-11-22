@@ -144,7 +144,9 @@ hr {
     margin-top: 5px;
     color: #888;
     text-align: center;
-    word-break: break-all; }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .tab-area {
   margin-top: 15px; }
@@ -174,26 +176,28 @@ hr {
   #item-detail-panel #title {
     color: #5581A2; }
 
-.recommend-panel {
+#recommend-panel {
   background-color: white;
   border-radius: 5px;
   padding: 10px;
   height: 400px;
   overflow: scroll;
   overflow-x: hidden; }
-  .recommend-panel .combination {
+  #recommend-panel .combination {
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #aaa;
     display: flex;
     height: auto;
     position: relative; }
-    .recommend-panel .combination .favorite-icon {
+    #recommend-panel .combination .favorite-icon {
       position: absolute;
       width: 30px;
       height: 30px;
       top: 10px;
       right: 10px; }
+      #recommend-panel .combination .favorite-icon:hover {
+        cursor: pointer; }
 
 .dropdown-container {
   display: flex;
