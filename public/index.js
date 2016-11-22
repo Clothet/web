@@ -72,7 +72,7 @@ function putCombinationIntoPanel(mItems /*array*/){
     $("#recommend-panel").append(
         '<div class="combination">'+
             s+
-            '<img class="favorite-icon" src="./img/full-heart.png" onclick=toggleHeart(this) />'+
+            '<img data-full=0 class="favorite-icon" src="./img/empty-heart.png" onclick=toggleHeart(this) />'+
         '</div>'
     );
 }
@@ -110,8 +110,15 @@ function showDetail(id) {
 
 
 
-function toggleHeart(event) {
-    console.log(event)
+function toggleHeart(html) {
+    var jHtml = $(html)
+    if($(html).attr('data-full')=="0"){
+        $(html).attr('data-full',"1");
+        $(html).attr('src','./img/full-heart.png');
+    }else{
+        $(html).attr('data-full',"0");
+        $(html).attr('src','./img/empty-heart.png');
+    }
 }
 
 
